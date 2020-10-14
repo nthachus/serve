@@ -16,13 +16,15 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-          scope: '@nthachus'
-
+          scope: "@nthachus"
       - name: Cache Node.js modules
-        uses: c-hive/gha-yarn-cache@v1
+        uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
       - name: Install dependencies
         run: yarn --ignore-optional --ignore-scripts
-
       - run: yarn test
       - run: yarn build
       - run: cd dist && yarn publish --access public
