@@ -1,5 +1,5 @@
 {
-  "name": "serve",
+  "name": "@nthachus/serve",
   "version": "11.4.0",
   "description": "Static file serving and directory listing",
   "scripts": {
@@ -11,7 +11,7 @@
   "files": [
     "bin"
   ],
-  "repository": "zeit/serve",
+  "repository": "nthachus/serve",
   "bin": {
     "serve": "./bin/serve.js"
   },
