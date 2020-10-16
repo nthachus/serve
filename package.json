@@ -1,6 +1,6 @@
 {
   "name": "@nthachus/serve",
-  "version": "11.4.0",
+  "version": "11.4.1",
   "description": "Static file serving and directory listing",
   "scripts": {
     "build": "rimraf dist && webpack --progress",
